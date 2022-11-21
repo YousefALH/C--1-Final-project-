@@ -5,6 +5,7 @@
 using namespace std;
 
 
+
 int main()
 {
 	vector<char>row1;
@@ -21,8 +22,6 @@ int main()
 	int onescore=0;
 	int twoscore=0;
 	char again='y';
- 
- 
  
 	for(int i=0;i<7;++i)
 	{
@@ -42,14 +41,14 @@ int main()
 		row7[0]='7';
 	}
  
-	while(again=='Y'||again=='y')
+	while(again == 'Y' || again =='y')
 	{
-		cout<<"Player 1: "<<onescore<<"    Player 2: "<<twoscore;
+		cout<<"Player 1: "<< onescore <<"    Player 2: "<<twoscore << endl;
  
 		for(int i=0;i<7;++i)
 		{
 			if(i==0)
-				cout<<"\n\n\n   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
+				cout<<"   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
 			if(i>0&&i<7)
 				cout<<" | "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<" |\n";
 			if(i==6)
@@ -253,7 +252,6 @@ int main()
 					cout<<"  ---------------\n |               |\n\n\n";
 			}
  
- 
 			for(int i=6;i>0;--i)
 			{
 				if((row1[i]=='O'&&row2[i]=='O'&&row3[i]=='O'&&row4[i]=='O')||(row5[i]=='O'&&row2[i]=='O'&&row3[i]=='O'&&row4[i]=='O')||(row5[i]=='O'&&row6[i]=='O'&&row3[i]=='O'&&row4[i]=='O')||(row5[i]=='O'&&row6[i]=='O'&&row7[i]=='O'&&row4[i]=='O'))
@@ -269,17 +267,18 @@ int main()
 					win=2; //for diagonally up left
 			}
 			////////////////////////////////////////////////////////
+			
 		}
  
 		if(win==2)
 		{
 			++twoscore;
-			cout<<"Player 2 Wins!!!\n\nWould you like to play again? (Y/N): ";
+			cout<<"Player 2 Wins!\n\nWould you like to play again? (Y/N): ";
 		}
 		else if(win==1)
 		{
 			++onescore;
-			cout<<"Player 1 Wins!!!\n\nWould you like to play again? (Y/N): ";
+			cout<<"Player 1 Wins!\n\nWould you like to play again? (Y/N): ";
 		}
  
 		cin>>again;
