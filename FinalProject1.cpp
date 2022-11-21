@@ -4,17 +4,29 @@
 
 using namespace std;
 
+vector<char>row1;
+vector<char>row2;
+vector<char>row3;
+vector<char>row4;
+vector<char>row5;
+vector<char>row6;
+vector<char>row7;
 
-
-int main()
+int FoS()
 {
-	vector<char>row1;
-	vector<char>row2;
-	vector<char>row3;
-	vector<char>row4;
-	vector<char>row5;
-	vector<char>row6;
-	vector<char>row7;
+	for(int i=0;i<7;++i)
+		{
+			if(i==0)
+				cout<<"   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
+			if(i>0&&i<7)
+				cout<<" | "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<" |\n";
+			if(i==6)
+				cout<<"  ---------------\n |               |\n\n\n";
+		}
+}
+
+int main(){
+
  
 	int move1;
 	int win=0;
@@ -26,34 +38,26 @@ int main()
 	for(int i=0;i<7;++i)
 	{
 		row1.push_back(' ');
-		row1[i]='1';
+		row1[0]='1';
 		row2.push_back(' ');
-		row2[i]='2';
+		row2[0]='2';
 		row3.push_back(' ');
-		row3[i]='3';
+		row3[0]='3';
 		row4.push_back(' ');
-		row4[i]='4';
+		row4[0]='4';
 		row5.push_back(' ');
-		row5[i]='5';
+		row5[0]='5';
 		row6.push_back(' ');
-		row6[i]='6';
+		row6[0]='6';
 		row7.push_back(' ');
-		row7[i]='7';
+		row7[0]='7';
 	}
  
 	while(again == 'Y' || again =='y')
 	{
 		cout<<"Player 1: "<< onescore <<"    Player 2: "<<twoscore << endl;
  
-		for(int i=0;i<7;++i)
-		{
-			if(i==0)
-				cout<<"   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
-			if(i>0&&i<7)
-				cout<<" | "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<" |\n";
-			if(i==6)
-				cout<<"  ---------------\n |               |\n\n\n";
-		}
+	FoS();
  
 		while(win==0)
 		{
@@ -134,15 +138,7 @@ int main()
 				}
 			}
 			////////////////////////////////////////////////////////text base for board	
-			for(int i=0;i<7;++i)
-			{
-				if(i==0)
-					cout<<"   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
-				if(i>0&&i<7)
-					cout<<" | "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<" |\n";
-				if(i==6)
-					cout<<"  ---------------\n |               |\n\n\n";
-			}
+			FoS();
  
 			for(int i=6;i>0;--i)
 			{
@@ -242,15 +238,7 @@ int main()
  
 			}
 			////////////////////////////////////////////////////////	
-			for(int i=0;i<7;++i)
-			{
-				if(i==0)
-					cout<<"   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
-				if(i>0&&i<7)
-					cout<<" | "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<" |\n";
-				if(i==6)
-					cout<<"  ---------------\n |               |\n\n\n";
-			}
+			FoS();
  
 			for(int i=6;i>0;--i)
 			{
