@@ -25,7 +25,7 @@ void check(int x)
             }
         else
         {
-        std::cout << "WRONG!" << std::endl;
+        std::cout << "Invalid input, please try again." << std::endl;
         a=0;
         player++;
         }
@@ -75,41 +75,41 @@ int win_check()
         if(tab[j][i]==1 && tab[j+1][i+1]==1 && tab[j+2][i+2]==1 && tab[j+3][i+3]==1)
             {
             end = true;
-            std::cout << "\nPLAYER 1 WIN!" << std::endl;
+            std::cout << "\nPlayer 1 wins!" << std::endl;
             }
         if(tab[j][i]==1 && tab[j+1][i-1]==1 && tab[j+2][i-2]==1 && tab[j+3][i-3]==1)
             {
-            std::cout << "\nPLAYER 1 WIN!" << std::endl;
+            std::cout << "\nPlayer 1 wins!" << std::endl;
             end = true;
             }
         if(tab[j][i]==2 && tab[j+1][i-1]==2 && tab[j+2][i-2]==2 && tab[j+3][i-3]==2)
             {
-            std::cout << "\nPLAYER 2 WIN!" << std::endl;
+            std::cout << "\nPlayer 2 wins!" << std::endl;
             end=true;
             }
         else if(tab[j][i]==2 && tab[j-1][i-1]==2 && tab[j-2][i-2]==2 && tab[j-3][i-3]==2)
             {
             end = true;
-            std::cout << "\nPLAYER 2 WIN!" << std::endl;
+            std::cout << "\nPlayer 2 wins!" << std::endl;
             }
         else if(tab[j][i]==1 && tab[j][i-1]==1 && tab[j][i-2]==1 && tab[j][i-3]==1)
             {
-            std::cout << "\nPLAYER 1 WIN!" << std::endl;
+            std::cout << "\nPlayer 1 wins!" << std::endl;
             end = true;
             }
         else if(tab[j][i]==1 && tab[j-1][i]==1 && tab[j-2][i]==1 && tab[j-3][i]==1)
             {
-            std::cout << "\nPLAYER 1 WIN!" << std::endl;
+            std::cout << "\nPlayer 1 wins!" << std::endl;
             end = true;
             }
         else if(tab[j][i]==2 && tab[j][i-1]==2 && tab[j][i-2]==2 && tab[j][i-3]==2)
             {
-            std::cout << "\nPLAYER 2 WIN!" << std::endl;
+            std::cout << "\nPlayer 2 wins!" << std::endl;
             end = true;
             }
         else if(tab[j][i]==2 && tab[j-1][i]==2 && tab[j-2][i]==2 && tab[j-3][i]==2)
             {
-            std::cout << "\nPLAYER 2 WIN!" << std::endl;
+            std::cout << "\nPlayer 2 wins!" << std::endl;
             end = true;
             }
         }
@@ -120,7 +120,7 @@ int p_choice()
     player = 1;
     while(end!=true)
     {
-    std::cout << "PLAYER " << player << ": ";
+    std::cout << "Player " << player << ": ";
     std::cin >> choice;
         if (choice>0 && choice<8)
         {
@@ -137,7 +137,7 @@ int p_choice()
         }
     else
         {
-    std::cout << "WRONG CHOICE!" << std::endl;
+    std::cout << "Invalid selection, please try again" << std::endl;
         }
     win_check();
     }
@@ -146,8 +146,17 @@ int p_choice()
 
 int main()
 {
+    //string input;
     system("clear");
-    std::cout<<"WELCOME IN CONNECT 4"<<std::endl;
+    std::cout<<"Welcome to Connect 4"<<std::endl;
+    /*std::cout << "Do you know how to play? (enter y/n)" <<std::endl;
+    std::cin >> input;
+    if (input == 'n'){
+        break;
+    }else {
+       std::cout << "The rules are simple. There are two players taking turns,\n" << "if it is your turn"
+    }
+    */
     sleep(1);
     draw();
     p_choice();
