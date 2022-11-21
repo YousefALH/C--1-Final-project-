@@ -26,19 +26,19 @@ int main()
 	for(int i=0;i<7;++i)
 	{
 		row1.push_back(' ');
-		row1[0]='1';
+		row1[i]='1';
 		row2.push_back(' ');
-		row2[0]='2';
+		row2[i]='2';
 		row3.push_back(' ');
-		row3[0]='3';
+		row3[i]='3';
 		row4.push_back(' ');
-		row4[0]='4';
+		row4[i]='4';
 		row5.push_back(' ');
-		row5[0]='5';
+		row5[i]='5';
 		row6.push_back(' ');
-		row6[0]='6';
+		row6[i]='6';
 		row7.push_back(' ');
-		row7[0]='7';
+		row7[i]='7';
 	}
  
 	while(again == 'Y' || again =='y')
