@@ -11,11 +11,14 @@ vector<char>row4;
 vector<char>row5;
 vector<char>row6;
 vector<char>row7;
+int pieceCounter = 0;
+
 
 int FoS()
 {
 	for(int i=0;i<7;++i)
 		{
+			pieceCounter++;
 			if(i==0)
 				cout<<"   "<<row1[i]<<" "<<row2[i]<<" "<<row3[i]<<" "<<row4[i]<<" "<<row5[i]<<" "<<row6[i]<<" "<<row7[i]<<"  \n  ---------------\n";
 			if(i>0&&i<7)
@@ -255,6 +258,10 @@ int main(){
 					win=2; //for diagonally up left
 			}
 			////////////////////////////////////////////////////////
+			if (pieceCounter >= 294){
+				cout << "The game has ended in a draw, please play again." << endl;
+				break;
+			}
 			
 		}
  
